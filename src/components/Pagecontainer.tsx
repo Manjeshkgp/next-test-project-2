@@ -1,15 +1,29 @@
+"use client";
+
 import { Account } from "@/types/api";
-import { FC } from "react";
+import { FC, useState } from "react";
+import Users from "./Users";
 
 interface PagecontainerProps {
   users: Account[];
 }
 
-const Pagecontainer: FC<PagecontainerProps> = ({}) => {
+const Pagecontainer: FC<PagecontainerProps> = ({ users }) => {
+  const [selected, setSelected] = useState<number>(0);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen justify-items-center transition-all duration-300">
-      <div className="w-40 h-40 bg-green-300"></div>
-      <div className="w-40 h-40 bg-blue-300"></div>
+    <div className="max-w-[1024px] lg:mx-[calc((100vw-1024px)/2)] flex flex-col-reverse gap-6 justify-start items-center md:items-start md:grid md:grid-cols-2 min-h-screen p-[2vh] md:pt-[4rem] lg:pt-[4rem] lg:p-[2vw] justify-items-center">
+      <Users
+        selected={selected}
+        setSelected={setSelected}
+        list={true}
+        users={users}
+      />
+      <Users
+        selected={selected}
+        setSelected={setSelected}
+        list={false}
+        users={users}
+      />
     </div>
   );
 };

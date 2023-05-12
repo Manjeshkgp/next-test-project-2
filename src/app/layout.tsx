@@ -4,7 +4,7 @@ import Providers from "../components/Themeprovider";
 import Themechanger from "../components/Themechanger";
 
 export const metadata: Metadata = {
-  title: "Create Night Mode",
+  title: "Users List App",
   description: "Manually Created",
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html>
       <body>
         <Providers>
-          <div className="overflow-x-hidden">
+          <div className="overflow-x-hidden bg-white text-black dark:bg-black dark:text-white">
             <Themechanger />
             {children}
           </div>
