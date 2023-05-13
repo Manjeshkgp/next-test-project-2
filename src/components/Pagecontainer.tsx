@@ -11,7 +11,7 @@ interface PagecontainerProps {
 const Pagecontainer: FC<PagecontainerProps> = ({ users }) => {
   const [selected, setSelected] = useState<number>(0);
   return (
-    <div className="max-w-[1024px] lg:mx-[calc((100vw-1024px)/2)] flex flex-col-reverse gap-6 justify-start items-center md:items-start md:grid md:grid-cols-2 min-h-screen p-[2vh] md:pt-[4rem] lg:pt-[4rem] lg:p-[2vw] justify-items-center">
+    <div className="max-w-[1024px] lg:mx-[calc((100vw-1024px)/2)] flex flex-col-reverse gap-6 justify-start items-center md:items-start md:grid md:grid-cols-2 min-h-screen p-[2vh] md:pt-[3rem] lg:pt-[3rem] lg:p-[2vw] justify-items-center">
       <Users
         selected={selected}
         setSelected={setSelected}
